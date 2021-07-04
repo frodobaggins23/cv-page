@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+
+
+.test {
+    font-weight: bold;
+    color:pink;
+    background-color: $primaryBlue;
+
+    span {
+        color:red;
+        font-weight: normal;
+    }
+}

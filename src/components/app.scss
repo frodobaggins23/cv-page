@@ -1,0 +1,26 @@
+@import url("../fonts.scss");
+@import "../variables.scss";
+
+* {
+    font-family: 'SpartanRegular';
+}
+
+.container {
+    height: 100vh;
+    background-color: #E7E3EB;
+    .header {
+        padding: 15px 20px;
+        background-color: $grayishBlack;
+        h1 {
+            color: #FFF;
+            font-family: 'SpartanRegular';
+            span {
+                font-family: 'SpartanBold';
+            }
+        }
+    }
+
+    .test {
+        color:white;
+    }
+}
