@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error'],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    'max-len': ['error', 160, 4],
     'import/order': [
       'error',
       {
