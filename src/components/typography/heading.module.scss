@@ -1,0 +1,52 @@
+@import "../../variables.scss";
+
+$primarySize: 22px;
+$secondarySize: 14px;
+$accentBoostSize: 2px;
+
+.container {
+    font-family: 'SpartanRegular';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $grayishBlack;
+
+    .headingPrimary, .headingSecondary {
+        vertical-align: text-top;
+        line-height: inherit;
+    }
+
+    .headingAccent {
+        font-family: 'SpartanBold';
+        vertical-align: baseline;
+        font-weight: normal;
+    }
+}
+
+.primary {
+    line-height: calc(#{$primarySize} + (4*#{$accentBoostSize}));
+}
+
+.secondary {
+    line-height: calc(#{$primarySize} + (2*#{$accentBoostSize}));
+}
+
+.inverted {
+    color: #fff;
+}
+
+.headingPrimary {
+    font-size: $primarySize;
+    
+    .headingAccent {
+        font-size: calc(#{$primarySize} + (2*#{$accentBoostSize}));
+    }
+}
+
+.headingSecondary {
+    font-size: $secondarySize;
+    vertical-align: text-top;
+
+    .headingAccent {
+        font-size: calc(#{$secondarySize} + #{$accentBoostSize});
+    }
+}

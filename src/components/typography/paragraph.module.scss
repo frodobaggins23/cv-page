@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+.paragraph {
+    font-family: 'SpartanRegular';
+    font-size: 11px;
+    color: $grayishBlack;
+
+    &.bold {
+        font-weight: bold;
+    }
+    &.italic {
+        font-style: italic;
+    }
+    &.inverted {
+        color: #fff;
+    }
+}

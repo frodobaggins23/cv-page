@@ -1,17 +1,16 @@
 import React from 'react'
 import './app.scss'
-import Header from 'components/header/'
-import logo from '../assets/img/react.png'
+import Heading from 'components/typography/Heading'
+import Paragraph from 'components/typography/Paragraph'
 
 const Home = () => {
   return (
     <div className="container">
-        <div className="header">
-            <Header/>
-            <h1><span>J</span>akub <span>Č</span>ejchan</h1>
-            <div className="test">Tady je nějaký text v češtině, jestli rozumí třeba řeřiše</div>
-            <img src={logo}/>
-        </div>
+      foos
+      <Heading copy="Jakub Čejchan" primary/>
+      <Paragraph copy={`I am already pretty confident working with React / Redux 
+        but would like to strengthen my backend skills (Express) as well as explore new
+        interesting frameworks (e.g. Svelte, Angular)`}/>
     </div>
   )
 }

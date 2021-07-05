@@ -3,24 +3,7 @@
 
 * {
     font-family: 'SpartanRegular';
-}
-
-.container {
-    height: 100vh;
-    background-color: #E7E3EB;
-    .header {
-        padding: 15px 20px;
-        background-color: $grayishBlack;
-        h1 {
-            color: #FFF;
-            font-family: 'SpartanRegular';
-            span {
-                font-family: 'SpartanBold';
-            }
-        }
-    }
-
-    .test {
-        color:white;
-    }
+    font-size: 11px;
+    line-height: 13px;
+    box-sizing: border-box;
 }
