@@ -6,7 +6,7 @@ exports.getCopyHandler = async ({ spreadsheetService, spreadsheetHelper }, res) 
     }
     const rows = await spreadsheetService.getRows()
     const data = spreadsheetHelper.getRowData(rows)
-    return res.status(500).send({
+    return res.status(200).send({
       intro: Array.from(data.get('intro')),
       work: Array.from(data.get('work')),
       vision: Array.from(data.get('vision')),

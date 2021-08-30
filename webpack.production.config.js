@@ -6,6 +6,8 @@ const SRC_DIR = path.resolve(__dirname, 'src')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.tsx'),
+  mode: 'production',
+  target: 'node',
   module: {
     rules: [
       {
@@ -57,17 +59,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, './public/bundle'),
+    publicPath: '/',
     filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: path.resolve(__dirname, './public'),
-    hot: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5051',
-        secure: false,
-        changeOrigin: true
-      }
-    }
   }
 }

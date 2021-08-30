@@ -1,5 +1,5 @@
 node_modules
-public
+public/bundle
 .env
 npm-debug.log
 .eslintcache
