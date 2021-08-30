@@ -58,19 +58,8 @@ module.exports = {
     })
   ],
   output: {
-    path: path.resolve(__dirname, './public'),
+    path: path.resolve(__dirname, './public/bundle'),
     publicPath: '/',
     filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: path.resolve(__dirname, './public'),
-    hot: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5050',
-        secure: false,
-        changeOrigin: true
-      }
-    }
   }
 }

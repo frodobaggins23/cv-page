@@ -56,7 +56,7 @@ module.exports = {
     })
   ],
   output: {
-    path: path.resolve(__dirname, './public'),
+    path: path.resolve(__dirname, './public/bundle'),
     filename: 'bundle.js'
   },
   devServer: {
@@ -64,7 +64,7 @@ module.exports = {
     hot: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:5050',
+        target: 'http://localhost:5051',
         secure: false,
         changeOrigin: true
       }
