@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './app.scss'
 import Heading from 'components/typography/Heading'
 import Paragraph from 'components/typography/Paragraph'
 
+type State = Record<string, any>
+
 const Home = () => {
+  const [state, setState] = useState<State>()
+  useEffect(() => {
+    fetch('/api/get-copy').then(response => response.json()).then(data => setState(data))
+  }, [])
+  console.log(state)
   return (
     <div className="container">
-      foos
       <Heading copy="Jakub Čejchan" primary/>
-      <Paragraph copy={`I am already pretty confident working with React / Redux 
-        but would like to strengthen my backend skills (Express) as well as explore new
-        interesting frameworks (e.g. Svelte, Angular)`}/>
+      <Paragraph copy={state ? state?.intro[0]?.introLong : 'not loaded'}/>
     </div>
   )
 }
