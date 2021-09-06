@@ -61,7 +61,9 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, './public'),
+    publicPath: '/bundle', // specifying where the bundled files are located
     hot: true,
+    port: 6969,
     proxy: {
       '/api': {
         target: 'http://localhost:5051',

@@ -10,14 +10,13 @@
     "test": "foo",
     "tsc": "tsc",
     "lint": "eslint --cache --ext .ts,.tsx .",
-    "dev": "concurrently \"webpack serve --config ./webpack.config.js --mode development --port 3000\" \"nodemon server/index.js\"",
+    "dev": "concurrently \"webpack serve --config ./webpack.config.js --mode development \" \"nodemon server/index.js\"",
     "start": "node server/index.js",
     "build": "NODE_ENV=production BABEL_ENV=node webpack --config ./webpack.production.config.js",
     "heroku-postbuild": "npm run build"
   },
   "author": "jakub.cejchan@gmail.com",
   "license": "ISC",
-  "proxy": "http://localhost:5050/",
   "dependencies": {
     "clsx": "^1.1.1",
     "concurrently": "^6.2.1",

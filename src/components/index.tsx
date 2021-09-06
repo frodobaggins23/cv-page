@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import './app.scss'
+import Box from 'components/blocks/Box'
 import Heading from 'components/typography/Heading'
 import Paragraph from 'components/typography/Paragraph'
-
-type State = Record<string, any>
+import { AppContext } from '../context'
 
 const Home = () => {
-  const [state, setState] = useState<State>()
-  useEffect(() => {
-    fetch('/api/get-copy').then(response => response.json()).then(data => setState(data))
-  }, [])
-  console.log(state)
+  const { loading } = useContext(AppContext)
+
   return (
-    <div className="container">
-      <Heading copy="Jakub Čejchan" primary/>
-      <Paragraph copy={state ? state?.intro[0]?.introLong : 'not loaded'}/>
+      <div className="container">
+      <Heading copy="Jakub Čejchansss" primary/>
+      <Paragraph copy={loading ? 'loading' : 'loaded'}/>
+      <Box/>
     </div>
   )
 }
