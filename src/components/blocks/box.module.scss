@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+@import "../../breakpoints.scss";
+
+.container {
+    text-align: center;
+    padding: $paddingBase calc(#{$paddingBase *2});
+    &.desktopOnly{
+        display: none;
+    }
+
+    @include sm {
+        &.mobileOnly{
+            display: none;
+        }
+        &.desktopOnly{
+            display: block;
+        }
+    }
+}
+
+.inverted {
+    background-color: $primaryBlue;
+    color:#fff;
+}
+
+.bordered {
+    @include sm {
+        border: $borderBase solid $secondaryBlue;
+        &.leftCol{
+            border-right: none;
+        }
+        &.rightCol {
+            border-left: none;
+        }
+    }
+}

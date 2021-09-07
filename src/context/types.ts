@@ -3,13 +3,13 @@ export type AppState = {
     data: ApiData
 }
 
-type Intro = {
+export type Intro = {
     name: string,
     intro:string,
     introLong:string,
 }
 
-type Work = {
+export type Work = {
     title: string,
     employer:string,
     dateFrom: string,
@@ -17,20 +17,20 @@ type Work = {
     description:string,
     workType:string,
 }
-type Vision = {
+export type Vision = {
     visionTitle:string,
     visionClaim:string,
     visionText:string
 }
 
-type Icons= {
+export type Icons= {
     iconText: string,
-    iconSrc: string,
+    iconType: string,
     iconUrl:string,
     iconAlt: string,
 }
 
-type OtherCopy = {
+export type OtherCopy = {
     otherText: string,
     otherValue1: string,
     otherValue2: string,

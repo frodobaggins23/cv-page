@@ -4,7 +4,7 @@ const ALLOWED_HEADERS = new Map(
     ['intro', ['name', 'intro', 'introLong']],
     ['work', ['title', 'employer', 'dateFrom', 'dateTo', 'description', 'workType']],
     ['vision', ['visionTitle', 'visionClaim', 'visionText']],
-    ['icons', ['icoText', 'iconSrc', 'iconUrl', 'iconAlt']],
+    ['icons', ['iconText', 'iconType', 'iconUrl', 'iconAlt']],
     ['other', ['otherText', 'otherValue1', 'otherValue2', 'otherValue3']]
   ])
 

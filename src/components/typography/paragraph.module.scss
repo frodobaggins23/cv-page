@@ -2,10 +2,13 @@
 
 .paragraph {
     font-family: 'SpartanRegular';
-    font-size: 11px;
+    font-size: 14px;
+    line-height: 24px;
     color: $grayishBlack;
+    margin-bottom: $marginBase;
 
     &.bold {
+        font-family: 'SpartanBold';
         font-weight: bold;
     }
     &.italic {
@@ -13,5 +16,8 @@
     }
     &.inverted {
         color: #fff;
+    }
+    &.uppercase {
+        text-transform: uppercase;
     }
 }

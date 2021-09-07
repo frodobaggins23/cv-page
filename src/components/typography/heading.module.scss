@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 $primarySize: 22px;
-$secondarySize: 14px;
+$secondarySize: 18px;
 $accentBoostSize: 2px;
 
 .container {
@@ -9,6 +9,7 @@ $accentBoostSize: 2px;
     text-transform: uppercase;
     font-weight: bold;
     color: $grayishBlack;
+    margin-bottom: calc(#{$marginBase}*2);
 
     .headingPrimary, .headingSecondary {
         vertical-align: text-top;
@@ -23,11 +24,11 @@ $accentBoostSize: 2px;
 }
 
 .primary {
-    line-height: calc(#{$primarySize} + (4*#{$accentBoostSize}));
+    line-height: calc(#{$primarySize} + (5*#{$accentBoostSize}));
 }
 
 .secondary {
-    line-height: calc(#{$primarySize} + (2*#{$accentBoostSize}));
+    line-height: calc(#{$primarySize} + (3*#{$accentBoostSize}));
 }
 
 .inverted {
@@ -39,6 +40,10 @@ $accentBoostSize: 2px;
     
     .headingAccent {
         font-size: calc(#{$primarySize} + (2*#{$accentBoostSize}));
+        vertical-align: revert;
+        &.additionalSpacing {
+            letter-spacing: 2px;
+        }
     }
 }
 
@@ -48,5 +53,6 @@ $accentBoostSize: 2px;
 
     .headingAccent {
         font-size: calc(#{$secondarySize} + #{$accentBoostSize});
+        vertical-align: revert;
     }
 }

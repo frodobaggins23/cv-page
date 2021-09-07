@@ -1,9 +1,10 @@
 @import url("../fonts.scss");
 @import "../variables.scss";
+@import "../breakpoints.scss";
 
 * {
     font-family: 'SpartanRegular';
-    font-size: 11px;
+    font-size: 14px;
     line-height: 13px;
     box-sizing: border-box;
 }

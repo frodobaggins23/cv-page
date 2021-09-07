@@ -42,7 +42,8 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.ts', '.tsx'],
     alias: {
-      components: path.resolve(__dirname, 'src/components')
+      components: path.resolve(__dirname, 'src/components'),
+      context: path.resolve(__dirname, 'src/context')
     }
   },
   devtool: 'source-map',
