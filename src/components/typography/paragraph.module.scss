@@ -6,6 +6,7 @@
     color: $grayishBlack;
 
     &.bold {
+        font-family: 'SpartanBold';
         font-weight: bold;
     }
     &.italic {
@@ -13,5 +14,8 @@
     }
     &.inverted {
         color: #fff;
+    }
+    &.uppercase {
+        text-transform: uppercase;
     }
 }

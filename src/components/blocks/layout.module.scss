@@ -1,0 +1,27 @@
+@import "../../breakpoints.scss";
+.container {
+    max-width: 1200px;
+    margin: 12px auto;
+}
+
+.columnWrapper {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 0 0 100%;
+    @include sm {
+        flex: 0 0 49%;
+    }
+
+    @include lg {
+        flex: 1 1 49%;
+        &.columnSecondary{
+            flex: 0 0 40%;
+        }
+    }
+
+}

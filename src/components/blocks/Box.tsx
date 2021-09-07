@@ -1,14 +1,12 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../../context'
-import type { AppState } from '../../context/types'
+import React, { ReactChild } from 'react'
 
-const Box = () => {
-  const { loading, data } = useContext(AppContext) as AppState
-
+type Props = {
+  children: ReactChild | Array<ReactChild>
+}
+const Box = ({ children }: Props) => {
   return (
         <div>
-            {loading && 'Loading' }
-            {data.intro && data.intro[0].intro}
+           {children}
         </div>
   )
 }

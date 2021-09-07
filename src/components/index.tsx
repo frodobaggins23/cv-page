@@ -1,19 +1,34 @@
 import React, { useContext } from 'react'
 import './app.scss'
-import Box from 'components/blocks/Box'
-import Heading from 'components/typography/Heading'
-import Paragraph from 'components/typography/Paragraph'
-import { AppContext } from '../context'
+import { Container, Column, Header } from 'components/blocks'
+import PlaceholderBox from 'components/blocks/PlaceholderBox'
+import AboutMe from 'components/sections/about-me'
+import { AppContext, AppState } from 'context'
 
 const Home = () => {
-  const { loading } = useContext(AppContext)
+  const { loading } = useContext(AppContext) as AppState
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
 
   return (
-      <div className="container">
-      <Heading copy="Jakub Čejchansss" primary/>
-      <Paragraph copy={loading ? 'loading' : 'loaded'}/>
-      <Box/>
-    </div>
+    <Container page>
+      <Header/>
+      <Container column>
+        <Column>
+          <AboutMe/>
+          <PlaceholderBox big/>
+          <PlaceholderBox/>
+          <PlaceholderBox/>
+        </Column>
+        <Column secondary>
+          <PlaceholderBox/>
+          <PlaceholderBox/>
+          <PlaceholderBox/>
+        </Column>
+      </Container>
+    </Container>
   )
 }
 
